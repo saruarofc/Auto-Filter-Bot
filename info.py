@@ -16,22 +16,22 @@ def is_enabled(value, default):
         return False
     else:
         return default
-
-#main variables
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
-USERNAME = environ.get('USERNAME', 'https://telegram.me/TechifyGuru')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
-DATABASE_URI = environ.get('DATABASE_URI', "")
+# Main variables
+API_ID = int(environ.get('API_ID', '25373179'))
+API_HASH = environ.get('API_HASH', 'e7cbea9f7469ee49c17ce48e2afd79b3')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7772911748:AAGMfH0sNYrgSiN1_18-vW4HhHEqF7c-5qE')
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6689545604').split()]
+USERNAME = environ.get('USERNAME', 'https://telegram.me/AuraBots')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002412649607'))
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002334859504 -1002287872705').split()]
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://globalsaruar:FaTG1zd2VVpiyprt@cluster0.5mwhc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Rahul")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Rahul')
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', ''))
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002412649607'))
 QR_CODE = environ.get('QR_CODE', 'https://envs.sh/wam.jpg')
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
+
 
 #this vars is for when heroku or koyeb acc get banned, then change this vars as your file to link bot name
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', ''))
